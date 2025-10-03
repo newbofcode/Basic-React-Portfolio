@@ -1,0 +1,119 @@
+/************ Contact Css ************/
+.contact {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  padding: 60px 0 200px 0;
+}
+
+.contact img {
+  width: 92%;
+}
+
+.contact h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Inputs and textarea - full width inside Bootstrap cols */
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 16px; /* consistent spacing */
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+  resize: vertical; /* allow vertical resizing on textarea */
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+  outline: none;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.contact form input:focus::placeholder,
+.contact form textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+
+/* Button styling */
+.contact form button {
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border: none;
+  display: inline-block;
+  /* Fix button width to content, so it doesn’t stretch */
+  width: auto;
+}
+
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+
+.contact form button:hover {
+  color: #fff;
+}
+
+.contact form button::before {
+  content: "";
+  background: #121212;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.contact form button:hover::before {
+  width: 100%;
+}
+
+/* Status message styles */
+.contact p.success {
+  color: #4BB543; /* green */
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.contact p.danger {
+  color: #FF3333; /* red */
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* Responsive tweaks (optional) */
+@media (max-width: 576px) {
+  .contact h2 {
+    font-size: 32px;
+  }
+
+  .contact form button {
+    width: 100%; /* full width button on mobile */
+  }
+}
