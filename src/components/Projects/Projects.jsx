@@ -10,22 +10,26 @@ import "./Projects.css";
 export const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Dev",
+      title: "Movie Search",
+      description:
+        "React site made using typescript and API calls to a Movie API",
       imgUrl: pjtimg1,
       videoUrl: "",
+      github: "https://github.com/newbofcode/Basic-React-Movie-Site",
     },
     {
-      title: "Business Startup",
-      description: "Design & Dev",
+      title: "This basic portfolio",
+      description: "Designed with React and bootstrap",
       imgUrl: pjtimg2,
       videoUrl: "",
+      github: "https://github.com/newbofcode/Basic-React-Portfolio",
     },
     {
       title: "Business Startup",
       description: "Design & Dev",
       imgUrl: pjtimg3,
       videoUrl: "",
+      github: "#",
     },
   ];
 
@@ -59,9 +63,9 @@ export const Projects = () => {
                   <Tab.Content>
                     <Tab.Pane eventKey="first">
                       <Row>
-                        {projects.map((project, index) => {
-                          return <ProjectCard key={index} {...project} />;
-                        })}
+                        {projects.map((project, index) => (
+                          <ProjectCard key={index} {...project} />
+                        ))}
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">Second tab content</Tab.Pane>
